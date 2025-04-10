@@ -27,6 +27,7 @@ call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'lilydjwg/colorizer'
 Plug 'junegunn/fzf.vim'
+Plug 'tribela/vim-transparent'
 
 call plug#end()
 
@@ -37,3 +38,5 @@ nnoremap <silent> <C-b> :Buffers<CR>
 
 colorscheme gruvbox
 set bg=dark
+
+autocmd VimLeave * silent !echo -ne "\e[6 q"
